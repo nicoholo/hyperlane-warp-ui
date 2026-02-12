@@ -71,3 +71,15 @@ export const chainsRentEstimate: ChainMap<bigint> = {
   sonicsvm: BigInt(Math.round(0.00411336 * 10 ** 9)),
   soon: BigInt(Math.round(0.00000355 * 10 ** 9)),
 };
+wardenprotocol: {
+  protocol: ProtocolType.Ethereum,
+  chainId: 8765,
+  domainId: 8765,
+  name: 'wardenprotocol',
+  displayName: 'Warden',
+  nativeToken: { name: 'WARD', symbol: 'WARD', decimals: 18 },
+  rpcUrls: [{ http: 'https://rpc.wardenprotocol.org' }],
+  blockExplorers: [{ name: 'Warden Explorer', url: 'https://explorer.wardenprotocol.org', family: ExplorerFamily.Etherscan }],
+  blocks: { confirmations: 1, reorgPeriod: 1, estimateBlockTime: 6 },
+  mailbox: '0x...替换为实际Mailbox地址',  // 关键！从 registry 或 deploy 拿
+},
